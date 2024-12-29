@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Сброс стандартных отступов */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #121212;
+	color: #fff;
+	overflow-x: hidden;
+    /* Добавляем свойства для фона */
+    background-image: url('../assets/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Основной контейнер */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
+}
+
+h1,
+.fade-in-text {
+	font-family: 'Great Vibes', cursive;
+	color: #FFF;
+}
+
+/* Заголовок */
+h1 {
+	font-size: 200px;
+}
+
+/* Добавим position: relative к контейнеру второй страницы */
+.second-page {
+	position: relative;
+}
+
+/* Стили для текстовой секции */
+.text-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5vh;
+	/* Расстояние между текстами */
+	min-height: 100vh;
+	padding: 20px;
+}
+
+/* Общие стили для появляющегося текста */
+.fade-in-text {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 2s ease, transform 2s ease;
+	font-size: 90px;
+	text-align: center;
+}
+
+
+
+/* Стили для видимого текста */
+.fade-in-text.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Кнопки */
+.btn {
+	background: linear-gradient(90deg, #BD2011 0%, #FEBC56 100%);
+	color: white;
+	border: none;
+	padding: 5px 15px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* Эффект при наведении */
+.btn:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Галерея */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.gallery img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект наведения на изображения */
+.gallery img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Коллаж */
+.collage {
+	margin-top: 50px;
+	text-align: center;
+}
+
+/* Медиа-запросы для адаптивности */
+@media screen and (max-width: 1400px) {
+	.fade-in-text {
+		font-size: 80px;
+	}
+
+	h1 {
+		font-size: 180px;
+	}
+
+	.btn {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.fade-in-text {
+		font-size: 70px;
+	}
+
+	h1 {
+		font-size: 160px;
+	}
+
+	.btn {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.fade-in-text {
+		font-size: 60px;
+	}
+
+	h1 {
+		font-size: 140px;
+	}
+
+	.btn {
+		font-size: 1rem;
+	}q
+
+	.text-section {
+		gap: 4vh;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.fade-in-text {
+		font-size: 50px;
+	}
+
+	h1 {
+		font-size: 120px;
+	}
+
+	.text-section {
+		gap: 3vh;
+	}
+
+	.btn {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.fade-in-text {
+		font-size: 40px;
+	}
+
+	h1 {
+		font-size: 100px;
+	}
+
+	.text-section {
+		gap: 2vh;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.fade-in-text {
+		font-size: 40px;
+	}
+
+	h1 {
+		font-size: 60px;
+	}
+
+	.text-section {
+		gap: 1vh;
+	}
+
+	.btn {
+		font-size: 0.8rem;
+	}
+}
