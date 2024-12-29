@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Happy New Year</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy New Year</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Первый экран -->
+  <div class="container first-page">
+    <h1>Happy New Year</h1>
+    <button id="startBtn" class="btn">Get Started</button>
+  </div>
 
-	<div class="container first-page">
-		<h1>Happy New Year</h1>
-		<button id="startBtn" class="btn">Get Started</button>
-	</div>
+  <!-- Второй экран (тексты) -->
+  <div class="container second-page" style="display: none;">
+    <div class="text-section">
+      <div class="fade-in-text" id="text1">This year was special</div>
+      <div class="fade-in-text" id="text2">Especially for us</div>
+      <div class="fade-in-text" id="text3">Let me show you our year...</div>
+    </div>
+  </div>
 
-	<!-- Вторая страница -->
-	<div class="container second-page" style="display: none;">
-		<div class="text-section">
-			<div class="fade-in-text" id="text1">This year was special</div>
-			<div class="fade-in-text" id="text2">Especially for us</div>
-			<div class="fade-in-text" id="text3">Let me show you our year...</div>
-		</div>
-	</div>
+  <!-- Блок с фотографиями -->
+  <div class="container photo-row-section" style="display: none;">
+    <div class="photo-row" id="photoRow">
+      <!-- Картинки подгружаются динамически -->
+    </div>
+    <button id="restartBtn" class="btn restart-btn" style="display: none;">Restart</button>
+  </div>
 
-	<div class="container photo-gallery" style="display: none;">
-		<div class="gallery">
-			<!-- Здесь будут фотографии -->
-		</div>
-		<div class="collage" style="display: none;">
-			<!-- Здесь будет коллаж -->
-			<h2>Our Year in Photos</h2>
-		</div>
-	</div>
+  <!-- Модальное окно -->
+  <div class="modal" id="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImg" src="" alt="Photo" />
+    <div class="prev" id="prevBtn">&#10094;</div>
+    <div class="next" id="nextBtn">&#10095;</div>
+  </div>
 
-	<script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
