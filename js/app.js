@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'assets/page2.jpg',
     'assets/page3.jpg',
     'assets/page4.jpg',
-    'assets/page5.JPG',
-    'assets/page6.JPG',
-    'assets/page7.JPG'
+    'assets/pages5.jpg',
+    'assets/pages6.jpg',
+    'assets/pages7.jpg'
   ];
 
   // Создаём теги <img> и добавляем их в .photo-row
